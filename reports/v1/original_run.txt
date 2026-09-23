@@ -1,0 +1,250 @@
+
+Final test flight:
+Samples: 12001
+Ground-truth anomalies: 970
+=== FLIGHT TEST ANOMALY DETECTION ===
+
+Development flight:
+Samples: 12001
+Ground-truth anomalies: 1005
+
+Validation flight:
+Samples: 12001
+Ground-truth anomalies: 1035
+
+=== BASELINE - DEVELOPMENT ===
+Predicted anomalies: 960
+Predicted anomaly rate: 8.00%
+
+Model performance:
+Precision: 0.531
+Recall: 0.507
+F1 score: 0.519
+
+Confusion matrix:
+True positives:  510
+False positives: 450
+False negatives: 495
+True negatives:  10546
+
+Detection by anomaly type:
+                     count  sum  detection_rate
+anomaly_type                                   
+airspeed_spike          21   21        1.000000
+altitude_drift         601  164        0.272879
+engine_rpm_drop        101  101        1.000000
+lateral_oscillation    251  220        0.876494
+sensor_dropout          31    4        0.129032
+
+=== BASELINE - VALIDATION ===
+Predicted anomalies: 912
+Predicted anomaly rate: 7.60%
+
+Model performance:
+Precision: 0.422
+Recall: 0.372
+F1 score: 0.395
+
+Confusion matrix:
+True positives:  385
+False positives: 527
+False negatives: 650
+True negatives:  10439
+
+Detection by anomaly type:
+                     count  sum  detection_rate
+anomaly_type                                   
+airspeed_spike          21   13        0.619048
+altitude_drift         601   18        0.029950
+engine_rpm_drop        121  121        1.000000
+lateral_oscillation    251  232        0.924303
+sensor_dropout          41    1        0.024390
+
+=== ENGINEERED - DEVELOPMENT ===
+Predicted anomalies: 960
+Predicted anomaly rate: 8.00%
+
+Model performance:
+Precision: 0.770
+Recall: 0.735
+F1 score: 0.752
+
+Confusion matrix:
+True positives:  739
+False positives: 221
+False negatives: 266
+True negatives:  10775
+
+Detection by anomaly type:
+                     count  sum  detection_rate
+anomaly_type                                   
+airspeed_spike          21   17        0.809524
+altitude_drift         601  359        0.597338
+engine_rpm_drop        101   94        0.930693
+lateral_oscillation    251  251        1.000000
+sensor_dropout          31   18        0.580645
+
+=== ENGINEERED - VALIDATION ===
+Predicted anomalies: 668
+Predicted anomaly rate: 5.57%
+
+Model performance:
+Precision: 0.732
+Recall: 0.472
+F1 score: 0.574
+
+Confusion matrix:
+True positives:  489
+False positives: 179
+False negatives: 546
+True negatives:  10787
+
+Detection by anomaly type:
+                     count  sum  detection_rate
+anomaly_type                                   
+airspeed_spike          21   13        0.619048
+altitude_drift         601   94        0.156406
+engine_rpm_drop        121   98        0.809917
+lateral_oscillation    251  251        1.000000
+sensor_dropout          41   33        0.804878
+
+=== RULE-BASED - DEVELOPMENT ===
+Predicted anomalies: 870
+Predicted anomaly rate: 7.25%
+
+Model performance:
+Precision: 0.663
+Recall: 0.574
+F1 score: 0.615
+
+Confusion matrix:
+True positives:  577
+False positives: 293
+False negatives: 428
+True negatives:  10703
+
+Detection by anomaly type:
+                     count  sum  detection_rate
+anomaly_type                                   
+airspeed_spike          21   21        1.000000
+altitude_drift         601  524        0.871880
+engine_rpm_drop        101    1        0.009901
+lateral_oscillation    251    0        0.000000
+sensor_dropout          31   31        1.000000
+
+=== RULE-BASED - VALIDATION ===
+Predicted anomalies: 682
+Predicted anomaly rate: 5.68%
+
+Model performance:
+Precision: 0.704
+Recall: 0.464
+F1 score: 0.559
+
+Confusion matrix:
+True positives:  480
+False positives: 202
+False negatives: 555
+True negatives:  10764
+
+Detection by anomaly type:
+                     count  sum  detection_rate
+anomaly_type                                   
+airspeed_spike          21   21        1.000000
+altitude_drift         601  417        0.693844
+engine_rpm_drop        121    1        0.008264
+lateral_oscillation    251    0        0.000000
+sensor_dropout          41   41        1.000000
+
+=== HYBRID - DEVELOPMENT ===
+Predicted anomalies: 1334
+Predicted anomaly rate: 11.12%
+
+Model performance:
+Precision: 0.690
+Recall: 0.916
+F1 score: 0.788
+
+Confusion matrix:
+True positives:  921
+False positives: 413
+False negatives: 84
+True negatives:  10583
+
+Detection by anomaly type:
+                     count  sum  detection_rate
+anomaly_type                                   
+airspeed_spike          21   21        1.000000
+altitude_drift         601  524        0.871880
+engine_rpm_drop        101   94        0.930693
+lateral_oscillation    251  251        1.000000
+sensor_dropout          31   31        1.000000
+
+=== HYBRID - VALIDATION ===
+Predicted anomalies: 1193
+Predicted anomaly rate: 9.94%
+
+Model performance:
+Precision: 0.696
+Recall: 0.802
+F1 score: 0.745
+
+Confusion matrix:
+True positives:  830
+False positives: 363
+False negatives: 205
+True negatives:  10603
+
+Detection by anomaly type:
+                     count  sum  detection_rate
+anomaly_type                                   
+airspeed_spike          21   21        1.000000
+altitude_drift         601  419        0.697171
+engine_rpm_drop        121   98        0.809917
+lateral_oscillation    251  251        1.000000
+sensor_dropout          41   41        1.000000
+
+=== DETECTED EVENTS - FINAL TEST ===
+Number of detected events: 8
+ event_id  start_s  end_s  duration_s detection_source
+        1    160.0  162.0         2.0   airspeed_spike
+        2    389.0  425.0        36.0   altitude_drift
+        3    425.8  446.5        20.7   altitude_drift
+        4    620.1  646.8        26.7  ml_multivariate
+        5    826.8  827.4         0.6  ml_multivariate
+        6    849.8  859.0         9.2  engine_rpm_drop
+        7    859.6  861.3         1.7  ml_multivariate
+        8   1100.0 1103.5         3.5   sensor_dropout
+
+=== HYBRID - FINAL UNSEEN TEST ===
+Predicted anomalies: 1054
+Predicted anomaly rate: 8.78%
+
+Model performance:
+Precision: 0.613
+Recall: 0.666
+F1 score: 0.638
+
+Confusion matrix:
+True positives:  646
+False positives: 408
+False negatives: 324
+True negatives:  10623
+
+Detection by anomaly type:
+                     count  sum  detection_rate
+anomaly_type                                   
+airspeed_spike          21   21        1.000000
+altitude_drift         551  266        0.482759
+engine_rpm_drop        111   73        0.657658
+lateral_oscillation    251  250        0.996016
+sensor_dropout          36   36        1.000000
+
+=== EVENT-LEVEL PERFORMANCE ===
+True anomaly events: 5
+Reported events: 8
+True events detected: 5
+Event recall: 100.0%
+False reported events: 2
+
+Timeline saved: C:\Users\polmg\OneDrive\Documents\AirbusGetafe2627\flight-test-anomaly-detection\reports\figures\final_test_anomaly_timeline.png

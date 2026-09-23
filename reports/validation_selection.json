@@ -1,0 +1,5 @@
+{
+  "model": "local_outlier_factor",
+  "mode": "ml",
+  "threshold": 2.0
+}

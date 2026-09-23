@@ -1,0 +1,7 @@
+event_id,start_s,end_s,duration_s,anomalous_samples,detection_source,primary_signals,triggered_rules,reason,ml_score,statistical_score,fused_score
+1,160.0,162.1,2.1,21,V1 hybrid,V1 sensors,historical V1 detector,historical V1 detector,0.0,0.0,1.0
+2,389.0,446.6,57.6,560,V1 hybrid,V1 sensors,historical V1 detector,historical V1 detector,0.0,0.0,1.0
+3,620.1,646.9000000000001,26.8,268,V1 hybrid,V1 sensors,,historical V1 detector,0.0,0.0,1.0
+4,825.6,828.6,3.0,6,V1 hybrid,V1 sensors,,historical V1 detector,0.0,0.0,1.0
+5,849.8000000000001,861.4000000000001,11.600000000000001,75,V1 hybrid,V1 sensors,historical V1 detector,historical V1 detector,0.0,0.0,1.0
+6,1100.0,1103.6,3.6,36,V1 hybrid,V1 sensors,historical V1 detector,historical V1 detector,0.0,0.0,1.0

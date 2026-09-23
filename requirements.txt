@@ -1,4 +1,1 @@
-numpy
-pandas
-matplotlib
-scikit-learn
+-r requirements-lock.txt

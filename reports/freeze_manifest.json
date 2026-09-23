@@ -1,0 +1,75 @@
+{
+  "frozen_at_utc": "2026-09-23T17:40:17.146069+00:00",
+  "config": {
+    "version": "2.0",
+    "sample_rate_hz": 10.0,
+    "duration_s": 600.0,
+    "ias_window_s": 15.0,
+    "rpm_window_s": 45.0,
+    "trend_window_s": 10.0,
+    "energy_window_s": 2.0,
+    "band_low_hz": 0.3,
+    "band_high_hz": 1.8,
+    "max_gap_s": 1.0,
+    "min_event_s": 0.5,
+    "min_iou": 0.1,
+    "n_estimators": 150,
+    "max_train_samples": 12000,
+    "random_state": 2026
+  },
+  "selection": {
+    "model": "local_outlier_factor",
+    "mode": "ml",
+    "threshold": 2.0
+  },
+  "development_seeds": [
+    101,
+    113,
+    127,
+    139,
+    151,
+    163,
+    179,
+    191
+  ],
+  "validation_seeds": [
+    307,
+    311,
+    331,
+    347,
+    359,
+    373
+  ],
+  "benchmark_seeds": [
+    1009,
+    1031,
+    1061,
+    1091,
+    1151,
+    1181,
+    1213,
+    1237
+  ],
+  "validation_normal_count": 1,
+  "benchmark_normal_count": 2,
+  "source_sha256": {
+    "main.py": "6c138078ac8c1af7b0a6fe485765d065f95b225c92fcbfc6adc3ef2f16d80173",
+    "src/v2/config.py": "834fbd4d4612d910b72b7c26e5101e4cfe9839f75ef0733c51bb05f2189af411",
+    "src/v2/data.py": "45721acc09d73ad59d62a25cfa65c98073a821213452be38bbb5d1337e62026b",
+    "src/v2/features.py": "67303005e025a5b7bae46e882a1570b9f55cf09d8cb49d51611fcb26726e66f0",
+    "src/v2/models.py": "518963eb52c24a30120dd1d03b7abc7d7dd2623c3c4bd6c336c9cc7f4da01745",
+    "src/v2/events.py": "29814415ced21ad301a59c00d31b538119cbace24eafdce4e7b1a403e4aaa547",
+    "src/v2/evaluation.py": "1c2e80469c13c97efb0d132212a2cb19227ef9beef785955def0278ea91aff0d",
+    "src/v2/experiments.py": "e9483a3cd03fe19d95cb616476adb9ed4ec8339f988c996ad87570b59d22924c",
+    "src/v2/protocol.py": "41ccc214ffa7e8df9631473283555386d4607655677c0336c5fefe903a7a61d6"
+  },
+  "environment": {
+    "python": "3.13.15",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1"
+  },
+  "fitted_state_sha256": "75368bb495706e38b8330e32b7cda8303f87adc88c1738a7b070fca8f313fa82",
+  "selection_objective": "0.5 sample F1 + 0.3 event F1 + 0.2 macro anomaly-family recall"
+}

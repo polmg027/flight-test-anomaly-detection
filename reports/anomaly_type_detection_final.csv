@@ -1,0 +1,6 @@
+anomaly_type,samples,detected,recall
+airspeed_spike,95,95,1.0
+altitude_drift,2893,2776,0.9595575527134462
+engine_rpm_drop,566,566,1.0
+lateral_oscillation,1170,1169,0.9991452991452991
+sensor_dropout,163,163,1.0

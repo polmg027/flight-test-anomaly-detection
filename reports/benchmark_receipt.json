@@ -1,0 +1,51 @@
+{
+  "first_evaluated_at_utc": "2026-09-23T17:40:20.753794+00:00",
+  "verification": {
+    "data_sha256": {
+      "1009": "0a6967fc4bae8048c8e9c3e5bdf1a9ad9597e7df034d216c9f1058bea73fc118",
+      "1031": "03aa22c8b0c30f612d8490718d98cf29ea2acbe31bb16c646425c6ca8d256e13",
+      "1061": "59e7aaec624ed04ea39bf08d6dd1f4c6828a405f37fb841fd8a4f122ae37eead",
+      "1091": "2f61f723d89eeaa63e4aeaccbcd314923b3fb6084e3c031d592febf24d7fb7f1",
+      "1151": "2649f3db74fcaef55938ad20dbb6ab51b58c79a6c11e6b5a50369715abe2f109",
+      "1181": "70ba435cc7e78ac79cf4f0f035525f7b2573cec3654f6f9cb37f4eb4a8b49795",
+      "1213": "08a6b27e47a5ba138ac8e902a569854daf2b6ea258a67c164388d7de9ada8fd9",
+      "1237": "5a45364771394739fa43d6639876b3e9437390755174ae2cd5a1887edda1925a"
+    },
+    "prediction_sha256": {
+      "1009": "cdf2258ac37f9ca7ec549e6fb077617ac9c671f249d7441fa1fa7cd3c8d33077",
+      "1031": "f5288de42952353f01817a0cd6670d6d1b3d58b493e1d53aeacba74134bf112e",
+      "1061": "346f789e79cd229abf8cbda5d825cbf74f00fee9817cd8b24511ae79b41bede9",
+      "1091": "639ab4caaaa4def1a2afbb51bcaf482d1a5b10423f4dcf7f726ebb5cc396812c",
+      "1151": "01c87402d4cda3ef74afcf6a05111a3feacb2f7c2253f2898c422fdb5a7fea2b",
+      "1181": "9ec1cca79a09132c49d925c957e10129428497c3a97233d417640168fd049b06",
+      "1213": "e9f7e8c5b89dfa605cded1f614415c394ffa9f2e203f7dcc2da0d7f87df2bb59",
+      "1237": "898e1d5bcf8293578b86e5bc3c8a2767fb7a808e1ee21b04ef8bbd933c8871f7"
+    },
+    "summary": {
+      "samples": 48000,
+      "tp": 4769,
+      "fp": 370,
+      "fn": 118,
+      "tn": 42743,
+      "true_events": 30,
+      "reported_events": 36,
+      "matched_events": 30,
+      "missed_events": 0,
+      "false_reported_events": 6,
+      "unmatched_overlapping_reports": 5,
+      "precision": 0.9280015567230979,
+      "recall": 0.9758543073460201,
+      "f1": 0.9513265509674845,
+      "event_precision": 0.8333333333333334,
+      "event_recall": 1.0,
+      "event_f1": 0.9090909090909091,
+      "duration_h": 1.3333333333333333,
+      "false_events_per_hour": 4.5,
+      "duplicate_detection_rate": 0.1388888888888889,
+      "mean_matched_iou": 0.9296807351326442,
+      "mean_signed_onset_error_s": -0.3699999999999984,
+      "per_flight_f1_min": 0.0,
+      "per_flight_f1_max": 0.9653361344537815
+    }
+  }
+}

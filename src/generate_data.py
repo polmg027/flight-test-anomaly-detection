@@ -148,6 +148,49 @@ def generate_validation_flight():
 
     return df
 
+def generate_final_test_flight():
+    df = create_base_flight(
+        seed=999,
+        altitude_base=9980,
+        ias_base=221,
+        rpm_base=5210,
+    )
+
+    # Airspeed spike
+    mask = (df["time_s"] >= 160) & (df["time_s"] <= 162)
+    df.loc[mask, "ias_kt"] += 18
+    df.loc[mask, ["anomaly", "anomaly_type"]] = [1, "airspeed_spike"]
+
+    # Altitude drift
+    mask = (df["time_s"] >= 360) & (df["time_s"] <= 415)
+    df.loc[mask, "altitude_ft"] += np.linspace(0, 130, mask.sum())
+    df.loc[mask, ["anomaly", "anomaly_type"]] = [1, "altitude_drift"]
+
+    # Lateral oscillation
+    mask = (df["time_s"] >= 620) & (df["time_s"] <= 645)
+    local_time = df.loc[mask, "time_s"] - 620
+
+    df.loc[mask, "roll_deg"] += (
+        4.0 * np.sin(2 * np.pi * 0.75 * local_time)
+    )
+
+    df.loc[mask, "yaw_rate_dps"] += (
+        1.0 * np.sin(2 * np.pi * 0.75 * local_time + 0.3)
+    )
+
+    df.loc[mask, ["anomaly", "anomaly_type"]] = [1, "lateral_oscillation"]
+
+    # Engine RPM drop
+    mask = (df["time_s"] >= 850) & (df["time_s"] <= 861)
+    df.loc[mask, "engine_rpm"] -= 650
+    df.loc[mask, ["anomaly", "anomaly_type"]] = [1, "engine_rpm_drop"]
+
+    # Sensor dropout
+    mask = (df["time_s"] >= 1100) & (df["time_s"] <= 1103.5)
+    df.loc[mask, "yaw_rate_dps"] = np.nan
+    df.loc[mask, ["anomaly", "anomaly_type"]] = [1, "sensor_dropout"]
+
+    return df
 
 if __name__ == "__main__":
     BASE_DIR = Path(__file__).resolve().parent.parent
@@ -173,3 +216,12 @@ if __name__ == "__main__":
     print(f"Anomalous samples: {validation['anomaly'].sum()}")
 
     print(f"\nSaved to: {DATA_DIR}")
+
+    final_test = generate_final_test_flight()
+
+    final_test_file = DATA_DIR / "final_test_flight.csv"
+    final_test.to_csv(final_test_file, index=False)
+
+    print("\nFinal test flight:")
+    print(f"Samples: {len(final_test)}")
+    print(f"Anomalous samples: {final_test['anomaly'].sum()}")
