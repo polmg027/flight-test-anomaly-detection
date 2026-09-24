@@ -1,4 +1,4 @@
-"""Rebuildable portfolio artifacts; presentation does not change predictions."""
+"""Rebuildable reporting artifacts; presentation does not change predictions."""
 import json
 import matplotlib
 matplotlib.use("Agg")

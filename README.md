@@ -252,7 +252,7 @@ data/*.csv                     Original representative V1 datasets
 data/v2/                       Regenerated local CSVs; ignored by Git
 reports/                       Compact metrics, freeze/receipt, reports and figures
 tests/                         Unit, artifact and dashboard checks
-docs/                          Audit, methodology and portfolio material
+docs/                          Audit and methodology
 ```
 
 Generated V2 CSVs are deliberately not committed; `py main.py` recreates them.

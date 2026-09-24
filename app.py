@@ -134,7 +134,7 @@ with method_tab:
     Final scores are evidence, not calibrated fault probabilities.
 
     Centered windows, interpolation and zero-phase filtering use future samples.
-    This is an offline portfolio tool with simplified synthetic dynamics, not a
+    This is an offline analysis tool with simplified synthetic dynamics, not a
     real-time or safety-certified aircraft system. V2 drift detection assumes an
     independent vertical-speed measurement unavailable to the original V1.
     """)

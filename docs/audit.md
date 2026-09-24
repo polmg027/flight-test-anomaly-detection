@@ -29,7 +29,7 @@ V1 entry point is archived in `archive/v1/main.py` (historical reference only).
 Its console output and original figure are preserved in `reports/v1/`.
 V2 lives in `src/v2/`; this avoids silently changing historical experiments.
 Generated V2 CSVs and local model caches are excluded from Git; reproducible
-configs, first-evaluation receipts, compact reports and portfolio figures are kept.
+configs, first-evaluation receipts, compact reports and benchmark figures are kept.
 
 V2 design decision: add a noisy independent vertical-speed measurement. Altitude
 drift is not generally identifiable from altitude alone during arbitrary climbs.
