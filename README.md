@@ -153,7 +153,7 @@ not additional tuning opportunities. Hashes provide local provenance, not an ext
 cryptographic timestamp or tamper-proof audit service.
 
 Future detector changes require a new version and genuinely new future holdout.
-Do not delete the freeze/receipt and present reused benchmark seeds as unseen.
+Reusing the benchmark seeds for model development would invalidate their status as unseen evaluation data.
 
 ## Results
 

@@ -246,5 +246,3 @@ Reported events: 8
 True events detected: 5
 Event recall: 100.0%
 False reported events: 2
-
-Timeline saved: C:\Users\polmg\OneDrive\Documents\AirbusGetafe2627\flight-test-anomaly-detection\reports\figures\final_test_anomaly_timeline.png
