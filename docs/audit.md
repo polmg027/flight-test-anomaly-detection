@@ -2,8 +2,7 @@
 
 Reviewed all nine `src/*.py` modules, root `main.py`, all four CSVs,
 requirements, ignore rules, the existing timeline, and Git history/status.
-The single existing commit is `2683f5e`; pre-existing local changes and
-untracked V1 files are preserved. No remote push is part of this work.
+
 
 - README was empty; no tests, dashboard, or machine-readable reports existed.
 - Four CSVs each contain 12,001 samples at 10 Hz. The original synthetic CSV
@@ -24,7 +23,7 @@ untracked V1 files are preserved. No remote push is part of this work.
 - Existing timeline has indistinguishable overlay colors and an inferred legend;
   it omits altitude despite drift being a major weakness.
 - No clearly unused functions in the small pipeline; repeated orchestration and
-  print blocks are the principal duplication. Keep historical modules intact.
+  print blocks are the principal duplication.
 
 V1 entry point is archived in `archive/v1/main.py` (historical reference only).
 Its console output and original figure are preserved in `reports/v1/`.

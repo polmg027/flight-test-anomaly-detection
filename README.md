@@ -233,8 +233,7 @@ Main outputs:
 - [Final per-flight metrics](reports/final_benchmark_metrics.csv).
 - [Final event reports](reports/final_detected_events.csv).
 - [All model comparisons](reports/model_comparison.csv).
-- [Audit](docs/audit.md), [methodology](docs/methodology.md), [interview preparation](docs/interview.md).
-- [CV, LinkedIn and spoken explanations](docs/portfolio_copy.md).
+- [Audit](docs/audit.md) and [methodology](docs/methodology.md).
 
 ## Repository structure
 
